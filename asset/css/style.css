@@ -4,6 +4,7 @@
 :root {
   --font-heading: "Sen", sans-serif;
   --primary-color: #ffb900;
+  --line-clamp: 1;
 }
 html {
   font-size: 62.5%;
@@ -38,6 +39,18 @@ a {
 .btn:hover {
   cursor: pointer;
   opacity: 0.9;
+}
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+.break-all {
+  word-break: break-all;
 }
 /* header */
 .header {
@@ -291,6 +304,7 @@ a {
   border-radius: 12px;
   background-color: #fff;
   border: 1px solid #e2dfda;
+  flex: 1;
 }
 
 .popular .course-item:hover {
@@ -364,4 +378,80 @@ a {
 .popular .foot .btn-course:hover {
   background-color: var(--primary-color);
   opacity: 0.9;
+}
+
+/* Feedback */
+.feedback {
+  margin-top: 135px;
+  background: #2e2100;
+}
+
+.feedback .feedback-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.feedback .feedback-list {
+  padding: 124px 135px 96px 0;
+}
+.feedback .info .avatar {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.feedback .info .desc-student {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 2.4rem;
+  line-height: 1.42;
+  margin-top: 18px;
+  color: #f7f7f7;
+}
+
+.feedback .info .desc {
+  margin-top: 4px;
+  font-family: Poppins;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #bfbcb2;
+}
+
+.feedback .info .dots {
+  display: flex;
+  margin-top: 28px;
+  gap: 6px;
+}
+
+.feedback .info .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #634700;
+  cursor: pointer;
+}
+
+.feedback .info .dot.active {
+  background-color: var(--primary-color);
+  cursor: default;
+}
+
+.feedback-item blockquote {
+  font-family: Poppins;
+  font-style: Italic;
+  font-size: 2.6rem;
+  line-height: 1.54;
+  color: #ffffff;
+  text-align: left;
+}
+
+.feedback .feedback-item .content {
+  width: 66%;
+}
+
+.feedback .feedback-item .info {
+  width: 34%;
 }
