@@ -52,6 +52,14 @@ a {
 .break-all {
   word-break: break-all;
 }
+
+.heading-lv2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 3.8rem;
+  line-height: 1.26;
+  letter-spacing: -2%;
+}
 /* header */
 .header {
   background-color: #fffcf4;
@@ -382,7 +390,7 @@ a {
 
 /* Feedback */
 .feedback {
-  margin-top: 135px;
+  margin: 135px 0 200px;
   background: #2e2100;
 }
 
@@ -449,7 +457,6 @@ a {
   font-size: 2.6rem;
   line-height: 1.54;
   color: #ffffff;
-  text-align: left;
 }
 
 .feedback .feedback-item .content {
@@ -458,4 +465,54 @@ a {
 
 .feedback .feedback-item .info {
   width: 34%;
+}
+/* features */
+.features {
+  padding: 65px 0;
+}
+
+.features .body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features .body .images {
+  display: flex;
+  width: 59%;
+  gap: 30px;
+}
+.features .body .content {
+  width: 41%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.features .images img {
+  width: 270px;
+  height: 405px;
+  object-fit: cover;
+}
+
+.features .lower {
+  margin-top: 34px;
+}
+
+.features .content .desc {
+  margin-top: 16px;
+  font-family: Poppins;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #5f5b53;
+}
+
+.features .cta-btn {
+  margin-top: 32px;
+  width: 137px;
+  height: 50px;
+  background-color: var(--primary-color);
+}
+
+.features .desc.line-clamp {
+  --line-clamp: 3;
 }
